@@ -1,0 +1,429 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+html,body{
+    min-height:100%;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#222
+}
+
+body{
+    font-size:14px
+}
+
+a{
+    color:inherit;
+    text-decoration:none
+}
+img{
+    max-width:100%;
+    display:block
+}
+
+.page{
+    min-height:100vh
+}
+
+h1{
+    font-size:28px;
+    font-weight:400;
+    text-align:center;
+    margin-bottom:32px;
+    color:#fa526b
+}
+
+.exercise{
+    max-width:1100px;
+    margin:0 auto;
+    padding:38px 24px
+}
+
+.note{
+    line-height:1.8;
+    color:#555
+}
+
+ul.instructions{
+    list-style-type:square;
+    padding-left:20px;
+    line-height:1.8;
+    color:#555
+}
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    align-items:center
+}
+
+/* Ejercicio 1 */
+
+.horizontal-page{
+    padding:50px 6%
+}
+.horizontal-nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:28px;
+    max-width:1180px;
+    margin:0 auto
+}
+
+.brand img{
+    width:145px;
+    height:auto
+}
+
+.horizontal-links,.languages{
+    display:flex;
+    align-items:center;
+    gap:30px
+}
+
+.horizontal-links a{
+    font-family:Georgia,serif;
+    font-size:10px;
+    color:#888
+}
+.languages{
+    gap:8px
+}
+
+.languages a{
+    background:#999;
+    color:white;
+    padding:9px 12px;
+    font-size:15px
+}
+
+/* Ejercicio 2 */
+.vertical-demo{
+    width:min(520px,100%);
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:3px
+}
+
+.vertical-demo a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#ddd;
+    padding:11px 16px;
+    font-size:12px
+}
+
+.vertical-demo span:last-child{
+    background:white;
+    padding:4px 8px
+}
+
+/* Ejercicio 3 */
+.center-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f5f4f2;
+    padding:24px
+}
+
+.center-card{
+    width:min(420px,100%);
+    background:#e9e5e3;
+    padding:24px;
+    font-size:12px;
+    color:#666
+}
+
+.center-card h2{
+    font-size:13px;
+    margin-bottom:12px;
+    color:#444
+}
+
+/* Ejercicio 4 */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:center
+}
+
+.gallery img{
+    width:calc(25% - 14px);
+    min-width:130px;
+    aspect-ratio:1;
+    object-fit:cover;
+    background:#ddd
+}
+
+.raw-example{
+    font-family:monospace;
+    font-size:12px;
+    margin-top:24px;
+    overflow-wrap:anywhere
+}
+
+/* Ejercicio 5 */
+.columns-page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    text-align:center
+}
+
+
+.columns-header{
+    text-align: center;
+     background:#eee;
+    padding:24px;
+    font-weight:bold
+}
+
+.columns-main{
+    display:flex;
+    flex:1;
+    min-height:0
+}
+
+.columns-main article{
+    flex:2;
+    background:#aaa;
+    padding:24px;
+    text-align:left
+}
+
+.columns-main nav,.columns-main aside{
+    flex:1;
+    background:#ccc;
+    padding:20px;
+    text-align:left
+}
+
+.columns-main h2{
+    font-size:17px;
+    margin-bottom:12px
+}
+
+.columns-main p{
+    font-size:13px
+}
+
+.columns-footer{
+    background:#eee;
+    padding:18px
+}
+
+.columns-note{
+    padding:12px 24px;
+    color:#c22;
+    text-align:left
+}
+
+/* Ejercicio 6 */
+.pricing-page{
+    min-height:100vh;
+    background:#93d9e9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px
+}
+
+.pricing-list{
+    width:min(1000px,100%);
+    display:flex;
+    justify-content:center;
+    align-items:stretch
+    ;gap:22px
+}
+
+.price-card{
+    flex:1;
+    min-width:0;
+    min-height:480px;
+    background:#fff;
+    border-radius:7px;
+    overflow:hidden;
+    box-shadow:0 3px 8px #0002;
+    display:flex;
+    flex-direction:column;
+    text-align:center
+}
+
+.price-head{
+    background:salmon;
+    padding:18px 8px;
+    font-weight:bold;
+    font-size:14px
+}
+
+.price-body{
+    padding:24px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;flex:1;
+    font-size:12px
+}
+
+.price-body p{
+    border-bottom:1px solid #eee;
+    padding-bottom:12px
+}
+
+.price-body button{
+    margin-top:auto;
+    border:0;background:#eee;
+    padding:10px 18px;
+    font-size:10px;
+    cursor:pointer
+}
+
+/*LAYOUT COMPLETO */
+
+.site-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-wrap {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.site-header {
+    background: salmon;
+    color: #fff;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.site-header h1 {
+    font-size: 20px;
+    color: #fff;
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.site-header p {
+    font-size: 12px;
+}
+
+.site-nav {
+    background: #17b99d;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 22px;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.site-nav .nav-main,
+.site-nav .nav-lang {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.site-content {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    flex: 1;
+    min-height: 0;
+    background: #fff;
+}
+
+.sidebar {
+    padding: 18px 12px;
+    background: #eee;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.placeholder {
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 28px;
+}
+
+.sidebar .placeholder {
+    width: 100%;
+    height: 400px;
+}
+
+.blog {
+    padding: 18px;
+}
+
+.blog h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.blog small {
+    display: block;
+    margin-bottom: 12px;
+    color: #777;
+}
+
+.blog .placeholder {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 14px;
+}
+
+.blog p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.site-footer {
+    margin-top: auto;
+    background: #eee;
+    text-align: center;
+    padding: 12px;
+    font-size: 11px;
+}
+
+/* ADAPTACIÓN PARA MÓVILES */
+
+@media (max-width: 700px) {
+
+    .site-nav {
+        flex-direction: column;
+    }
+
+    .site-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar .placeholder {
+        height: 250px;
+    }
+
+    .blog {
+        padding: 14px;
+    }
+}
